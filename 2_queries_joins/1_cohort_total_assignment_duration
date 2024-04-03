@@ -1,0 +1,10 @@
+-- Get the total amount of time that all students from a specific cohort have spent on all assignments
+
+SELECT sum(assignment_submissions.duration) as total_duration
+-- Specifies the table from which data will be retrieved
+FROM assignment_submissions
+-- join students and assignment_submissions (A.S.) table where the id from students table is plugged to student_id on A.S.
+JOIN students ON students.id = student_id
+-- joins cohorts to the previous join where the id of cohorts is plugged to cohort_id value found in the previous join (students)
+JOIN cohorts ON cohorts.id = cohort_id
+WHERE cohorts.name = 'FEB12';
