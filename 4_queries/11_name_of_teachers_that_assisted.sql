@@ -6,3 +6,16 @@ JOIN students ON student_id = students.id
 JOIN cohorts ON cohort_id = cohorts.id
 WHERE cohorts.name = 'JUL02'
 ORDER BY teacher;
+
+
+
+
+
+
+pool.query (`fdsdgs
+dgdsfss
+svgsdf
+sgfsv
+$1 ->  array
+$2 -> value`,
+[array, value])
